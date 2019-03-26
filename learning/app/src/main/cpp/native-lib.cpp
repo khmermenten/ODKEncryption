@@ -23,7 +23,7 @@ Java_com_example_myapplication_MainActivity_executeQuery (JNIEnv *env, jobject, 
     rc = sqlite3_open(cpath, &db);
 
     // sqlite3_key is used to encrypt a freshly created database, or to log into an already encrypted one
-    rc = sqlite3_key(db, "password", 1024);
+    //rc = sqlite3_key(db, "password", 1024);
     if (rc != SQLITE_OK) {
         (env)->ReleaseStringUTFChars(path, cpath);
         return (env)->NewStringUTF("couldn't establish connection");
